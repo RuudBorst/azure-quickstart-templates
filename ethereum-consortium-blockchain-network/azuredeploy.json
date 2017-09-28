@@ -158,7 +158,7 @@
   "variables": {
     "location": "[resourceGroup().location]",
     "artifactsLocationURL": "https://raw.githubusercontent.com/RuudBorst/azure-quickstart-templates/master/ethereum-consortium-blockchain-network",
-    "apiVersionDeployments": "2016-06-01",
+    "apiVersionDeployments": "2016-02-01",
     "apiVersionStorageAccounts": "2016-01-01",
     "apiVersionAvailabilitySets": "2016-03-30",
     "apiVersionNetworkSecurityGroups": "2015-06-15",
@@ -295,7 +295,7 @@
       "properties": {}
     },
     {
-      "apiVersion": "2016-06-01",
+      "apiVersion": "2016-02-01",
       "name": "loadBalancerLinkedTemplate",
       "type": "Microsoft.Resources/deployments",
       "properties": {
@@ -459,7 +459,7 @@
       }
     },
     {
-      "apiVersion": "2016-06-01",
+      "apiVersion": "2016-02-01",
       "name": "txVMLinkedTemplate",
       "type": "Microsoft.Resources/deployments",
       "dependsOn": [
@@ -538,7 +538,7 @@
       }
     },
     {
-      "apiVersion": "2016-06-01",
+      "apiVersion": "2016-02-01",
       "name": "mnVMLinkedTemplate",
       "type": "Microsoft.Resources/deployments",
       "dependsOn": [
@@ -609,7 +609,7 @@
       }
     },
     {
-      "apiVersion": "2016-06-01",
+      "apiVersion": "2016-02-01",
       "name": "vmExtensionLinkedTemplate",
       "type": "Microsoft.Resources/deployments",
       "dependsOn": [
