@@ -40,9 +40,9 @@
     }
   },
   "variables": {
-    "apiVersionPublicIPAddresses": "2016-09-01",
-    "apiVersionLoadBalancers": "2016-09-01",
-    "apiVersionLoadBalanceInboundNATRules": "2016-09-01",
+    "apiVersionPublicIPAddresses": "2015-06-15",
+    "apiVersionLoadBalancers": "2015-06-15",
+    "apiVersionLoadBalanceInboundNATRules": "2015-06-15,
     "lbID": "[resourceId('Microsoft.Network/loadBalancers', parameters('loadBalancerName'))]",
     "lbPublicIPAddressName": "[concat(parameters('dnsHostName'), '-publicip')]",
     "lbFrontEndIpConfigName": "LoadBalancerFrontEnd",
@@ -52,7 +52,7 @@
   },
   "resources": [
     {
-      "apiVersion": "2016-09-01",
+      "apiVersion": "2015-06-15",
       "type": "Microsoft.Network/publicIPAddresses",
       "name": "[variables('lbPublicIPAddressName')]",
       "location": "[parameters('location')]",
@@ -64,7 +64,7 @@
       }
     },
     {
-      "apiVersion": "2016-09-01",
+      "apiVersion": "2015-06-15",
       "name": "[parameters('loadBalancerName')]",
       "type": "Microsoft.Network/loadBalancers",
       "location": "[parameters('location')]",
