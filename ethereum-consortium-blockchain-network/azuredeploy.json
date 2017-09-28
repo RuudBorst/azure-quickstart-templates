@@ -295,7 +295,7 @@
       "properties": {}
     },
     {
-      "apiVersion": "2016-09-01",
+      "apiVersion": "2015-06-15",
       "name": "loadBalancerLinkedTemplate",
       "type": "Microsoft.Resources/deployments",
       "properties": {
@@ -345,7 +345,7 @@
       }
     },
     {
-      "apiVersion": "2016-09-01",
+      "apiVersion": "2015-06-15",
       "type": "Microsoft.Network/networkSecurityGroups",
       "name": "[variables('mnNsgName')]",
       "location": "[variables('location')]",
@@ -372,7 +372,7 @@
       }
     },
     {
-      "apiVersion": "2016-09-01",
+      "apiVersion": "2015-06-15",
       "type": "Microsoft.Network/networkSecurityGroups",
       "name": "[variables('txNsgName')]",
       "location": "[variables('location')]",
@@ -441,7 +441,7 @@
       }
     },
     {
-      "apiVersion": "2016-09-01",
+      "apiVersion": "2015-06-15",
       "type": "Microsoft.Network/virtualNetworks",
       "name": "[variables('virtualNetworkName')]",
       "location": "[variables('location')]",
@@ -459,7 +459,7 @@
       }
     },
     {
-      "apiVersion": "2016-09-01",
+      "apiVersion": "2015-06-15",
       "name": "txVMLinkedTemplate",
       "type": "Microsoft.Resources/deployments",
       "dependsOn": [
@@ -538,7 +538,7 @@
       }
     },
     {
-      "apiVersion": "2016-09-01",
+      "apiVersion": "2016-06-01",
       "name": "mnVMLinkedTemplate",
       "type": "Microsoft.Resources/deployments",
       "dependsOn": [
