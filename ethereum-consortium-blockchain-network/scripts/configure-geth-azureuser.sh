@@ -56,7 +56,7 @@ DIFFICULTY=`printf "0x%X" $(($DIFFICULTY_CONSTANT * $NUM_MN_NODES))`;
 # Update modules
 ################
 echo "===== Starting packages update =====";
-apt-get -y update || exit 1;
+sudo apt-get -y update || exit 1;
 echo "===== Completed packages update =====";
 # To avoid intermittent issues with package DB staying locked when next apt-get runs
 sleep 5;
@@ -65,8 +65,8 @@ sleep 5;
 # Install packages
 ##################
 echo "===== Starting packages installation =====";
-apt-get -y install npm=3.5.2-0ubuntu4 git=1:2.7.4-0ubuntu1 || unsuccessful_exit "package install 1 failed";
-update-alternatives --install /usr/bin/node nodejs /usr/bin/nodejs 100 || unsuccessful_exit "package install 2 failed";
+sudo apt-get -y install npm=3.5.2-0ubuntu4 git=1:2.7.4-0ubuntu1 || unsuccessful_exit "package install 1 failed";
+sudo update-alternatives --install /usr/bin/node nodejs /usr/bin/nodejs 100 || unsuccessful_exit "package install 2 failed";
 echo "===== Completed packages installation =====";
 
 ##############
@@ -86,7 +86,7 @@ gpg --verify geth-alltools-linux-amd64-1.6.0-facc47cb.tar.gz.asc || unsuccessful
 tar xzf geth-alltools-linux-amd64-1.6.0-facc47cb.tar.gz || unsuccessful_exit "geth download unpack failed";
 
 # /usr/bin is in $PATH by default, we'll put our binaries there
-cp geth-alltools-linux-amd64-1.6.0-facc47cb/* /usr/bin/ || unsuccessful_exit "copy of geth to /usr/bin failed";
+sudo cp geth-alltools-linux-amd64-1.6.0-facc47cb/* /usr/bin/ || unsuccessful_exit "copy of geth to /usr/bin failed";
 echo "===== Completed geth installation =====";
 
 #############
